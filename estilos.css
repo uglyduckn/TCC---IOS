@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* ZERANDO MARGIN E PADDING DE TODOS OS ELEMENTOS DO SITE */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--azul);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--amarelo);
+}
+
+/* CRIANDO VARIAVEIS PRA ARMAZENAR AS CORES QUE SERÃO UTILIZADAS NO SITE */
+:root {
+  --azul: #08244b;
+  --amarelo: #ffbe0e;
+  --branco: #fff;
+  --paragrafo: #00142f;
+}
+
+/* DEFININDO ESPAÇAMENTO PARA AS SEÇÕES */
+section {
+  padding: 80px 30px;
+}
+
+body {
+  overflow-x: hidden;
+}
+/* ESTILO DOS BOTÕES - INICIO */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--amarelo);
+  border: 1px solid var(--amarelo);
+  font-size: 18px;
+  padding: 8px 16px;
+  font-family: 'Open sans', sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.btn:hover {
+  background: var(--azul);
+  color: var(--amarelo);
+  font-weight: 400;
+  opacity: 1;
+}
+
+#btn-about {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--azul);
+  cursor: pointer;
+  color: var(--amarelo);
+  font-size: 18px;
+  padding: 16px 24px;
+  font-family: 'Open sans', sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 1;
+}
+
+#btn-about:hover {
+  background-color: var(--amarelo);
+  color: var(--azul);
+  transform: scaleX(1.1);
+}
+
+/* ESTILOS DOS BOTÕES - FIM */
+
+/* INÍCIO DO HEADER */
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul);
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 10%;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0px 6px 4px 2px rgba(1, 0, 69, 0.17);
+}
+
+.header li {
+  display: inline-block;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+}
+
+.header-menu li > a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.header-menu li > a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* FIM DO HEADER */
+
+/* INICIO DA SEÇÃO INICIAL */
+.home-bg {
+  background: url('IMG_1925.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-bg .home {
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.home-bg .home .content {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+}
+
+.home-bg .home .content h1 {
+  font-size: 128px;
+  color: var(--amarelo);
+  font-family: 'Cormorant', sans-serif;
+  font-weight: 400;
+  height: 130px;
+}
+
+.home-bg .home .content p {
+  padding: 8px 0;
+  font-size: 1rem;
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* FIM DA SEÇÃO INICIAL */
+
+/* INICIO DA SEÇÃO SOBRE NÓS */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
+}
+
+.about .content {
+  width: 400px;
+}
+
+.about .content h3 {
+  font-size: 64px;
+  font-family: 'Cormorant', sans-serif;
+  color: var(--azul);
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+
+span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about .content p {
+  font-size: 1rem;
+  color: var(--paragrafo);
+  font-family: 'Open sans', sans-serif;
+  line-height: 22px;
+  padding-bottom: 8px;
+  text-indent: 16px;
+}
+
+#p-1 {
+  text-indent: 16px;
+}
+/* FIM DA SEÇÃO SOBRE NÓS */
+
+/* INICIO DA SEÇÃO DEPOIMENTOS */
+.relatos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--azul);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.relatos content {
+  display: flex;
+}
+
+.relatos .content h3 {
+  font-size: 64px;
+  color: var(--amarelo);
+  font-family: 'Cormorant', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.box {
+  display: flex;
+
+  border: 1px solid var(--amarelo);
+  padding: 16px;
+  border-radius: 8px;
+  gap: 30px;
+  width: 600px;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#img1 {
+  background: url(daniela.jpg);
+  background-size: cover;
+}
+
+#img2 {
+  background: url(Emily.jpg);
+  background-size: cover;
+}
+
+#img3 {
+  background: url(vitoria.jpg);
+  background-size: cover;
+}
+
+#img4 {
+  background: url(luz.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img-user {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--amarelo);
+}
+
+.user h5 {
+  font-size: 24px;
+  color: var(--amarelo);
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+}
+
+.depoimento p {
+  font-size: 16px;
+  color: var(--branco);
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.depoimento p:hover {
+  color: var(--amarelo);
+}
+
+.span-ex {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: arial, sans-serif;
+  float: right;
+}
+/* FIM DA SEÇÃO DEPOIMENTOS */
+
+/* INICIO DA SEÇÃO CONTATO */
+.contato {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
+}
+
+.contato .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contato .content h3 {
+  font-size: 64px;
+  color: var(--azul);
+  font-weight: 400;
+  font-family: 'Cormorant', sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contato .content .formulario input,
+textarea {
+  background-color: #ffffff;
+  border: 1px solid rgb(204, 204, 204);
+  width: 800px;
+  margin: 10px;
+  padding: 30px 24px;
+  font-size: 24px;
+}
+
+#btn-enviar {
+  background-color: var(--azul);
+  cursor: pointer;
+  color: var(--amarelo);
+  font-size: 18px;
+  padding: 16px 24px;
+  font-family: 'Open sans', sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  text-decoration: none;
+  float: right;
+  margin-right: 8px;
+}
+
+#btn-enviar:hover {
+  background-color: var(--amarelo);
+  color: var(--azul);
+}
+
+/* FIM DA SEÇÃO CONTATO */
+
+/* INICIO SESSAO FOOTER */
+
+.footer {
+  background: var(--azul);
+  padding: 24px 16px;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--amarelo);
+  margin-bottom: 20px;
+}
+
+.footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer .content .menu-footer {
+  list-style: none;
+  display: flex;
+}
+
+.footer .content .menu-footer a {
+  padding: 10px;
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.footer .content h3 {
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-footer li > a:hover {
+  border-bottom: 1px solid #fff;
+}
+/* FIM DO FOOTER */

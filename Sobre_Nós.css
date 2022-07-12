@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; /* Para não bugar as divs. */
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+/* Seção do rolar da página. */
+
+::-webkit-scrollbar-track {
+  background-color: var(--azul);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--amarelo);
+}
+
+/* Fim da Seção do rolar da página. */
+
+/* DEFININDO ESPAÇAMENTO PARA AS SEÇÕES */
+
+section {
+  padding: 80px 30px;
+}
+
+body {
+  overflow-x: hidden; /* tira a rolagem horizontal da página. */
+}
+
+:root {
+  --azul: #08244b;
+  --amarelo: #ffbe0e;
+  --branco: #fff;
+  --paragrafo: #00142f;
+}
+
+/* Inicio da Header. */
+
+/* menu com links e logo. */
+.header {
+  position: fixed; /*Ele fixa o menu na tela. */
+  display: flex;
+  align-items: center;
+  background-color: var(--azul);
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 10%;
+  z-index: 100;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0px 6px 4px 2px rgba(1, 0, 69, 0.17);
+}
+
+/* Menu do site só com os links. */
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*vai mexer na cor dos links. */
+.header-menu a {
+  color: var(--branco);
+}
+/* mexe nos links; na lista de links. */
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 10px; /* aumenta o espaçamento entre os itens. */
+}
+
+.header li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.header-menu li > a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.menu-footer li > a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* Encerrando Sessão Header. */
+
+/* Inicio do Banner. */
+
+.banner {
+  background: url('IMG_1984-1.jpg');
+  background-size: cover; /* A imagem se ajusta para caber na div. */
+  background-position: center;
+}
+
+.banner .inicial {
+  min-height: 800px; /* Definindo altura minima da imagem do banner. */
+  display: flex;
+  align-items: center;
+}
+
+.banner .inicial .content {
+  width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner .inicial .content h1 {
+  font-size: 128px;
+  color: var(--amarelo);
+  font-family: 'Cormorant', sans-serif;
+  font-weight: 400;
+}
+
+.banner .inicial .content p {
+  color: var(--branco);
+  font-family: 'open sans', sans-serif;
+  font-size: 18px;
+}
+
+/* Fim da Seção Banner. */
+
+/* Inicio dos Textos. */
+
+.texto_1 .content {
+  /*Define espaçamentos para a seção inteira. */
+  width: 800px;
+  margin: 0 auto;
+}
+
+.texto_1 h1 {
+  /*Define as propriedades do Título do 1º texto. */
+  color: var(--azul);
+  font-family: 'cormorant', sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.texto_1 .content .titulo p {
+  /*Define as propriedades do parágrafo do 1º texto. */
+  color: var(--paragrafo);
+  font-family: 'open sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 64px;
+  text-align: justify;
+  text-indent: 16px;
+}
+
+/* Seção 2 */
+
+.texto_2 .content {
+  /*Define espaçamentos para a 2º seção inteira. */
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.texto_2 {
+  background: var(--azul);
+}
+
+.texto_2 h1 {
+  /*Define as propriedades do Título do 2º texto. */
+  color: var(--amarelo);
+  font-family: 'cormorant', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  text-align: justify;
+}
+
+.texto_2 .content .titulo p {
+  /*Define as propriedades do parágrafo do 2º texto. */
+  color: var(--branco);
+  font-family: 'open sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 32px;
+  text-indent: 16px;
+  text-align: justify;
+}
+
+.texto_2 .content {
+  display: flex;
+  gap: 50px;
+}
+
+.texto_2 .content #texto2 {
+  flex-direction: column;
+  padding: 20px;
+}
+.botao {
+  border-radius: 3px;
+  cursor: pointer;
+}
+.botao:hover {
+  background: var(--azul);
+  color: var(--branco);
+}
+
+/* Seção 3 */
+
+.texto_3 {
+  padding: 100px 0;
+}
+.texto_3 .content {
+  /*Define espaçamentos para a seção inteira. */
+  width: 900px;
+  margin: 0 auto;
+}
+
+.texto_3 h1 {
+  /*Define as propriedades do Título do 1º texto. */
+  color: var(--azul);
+  font-family: 'cormorant', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  text-align: justify;
+}
+
+.texto_3 .content .titulo p {
+  /*Define as propriedades do parágrafo do 1º texto. */
+  color: var(--paragrafo);
+  font-family: 'open sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 32px;
+  text-align: justify;
+}
+
+.texto_3 .content h2 {
+  color: var(--azul);
+  font-family: 'cormorant', sans-serif;
+  font-size: 32px;
+  font-weight: 400; /* Define a espessura da fonte. */
+  padding-bottom: 3px;
+  text-align: justify;
+  text-transform: uppercase; /*Deixa o texto maiusculo. */
+}
+
+/* Fim da Seção dos Textos. */
+
+/* Inicio da seção da Localização e Imagem. */
+
+.localizacao {
+  background: url('escola.png');
+  min-height: 650px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 0px;
+}
+
+.localizacao h3 {
+  font-size: 40px;
+  color: var(--amarelo);
+  font-weight: 400;
+  padding-bottom: 16px;
+  text-align: justify;
+}
+
+.localizacao p {
+  color: var(--branco);
+  font-size: 24px;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.localizacao .content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.texto-localizacao {
+  width: 705px;
+  background: linear-gradient(90deg, #08244b 16.11%, rgba(8, 36, 75, 0) 95.95%);
+  padding: 20px;
+}
+
+/* Fim da seção de Localização e Imagem. */
+
+/* Inicio da seção dos cards da equipe. */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .card {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.container .card .card_1,
+.card_2 {
+  background: var(--branco) center;
+  border: 1px solid var(--azul);
+  border-radius: 7px;
+  padding: 16px 35px;
+  width: 400px;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+
+.card_1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.cursos .container .card h2 {
+  text-transform: capitalize;
+  color: var(--paragrafo);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-family: 'Cormorant', sans-serif;
+  font-size: 32px;
+  color: var(--azul);
+}
+
+/* Div criada no CSS para fazer um sublinhado no título. */
+
+.card h2::after {
+  content: ''; /* É como uma div para ser estilizada no CSS. */
+  display: block;
+  height: 1px;
+  width: 80%;
+  background: var(--azul);
+  margin: 0 auto;
+}
+
+/* Fim da Div criada no CSS para fazer um sublinhado no título. */
+
+.card h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--paragrafo);
+  text-align: justify;
+}
+
+.card_1 {
+  margin-right: 40px;
+}
+
+.card_1:hover {
+  transform: scale(1.1);
+  box-shadow: -7px 4px 28px 3px var(--azul);
+}
+
+.card_2:hover {
+  transform: scale(1.1);
+  box-shadow: -7px 4px 28px 3px var(--azul);
+}
+
+.botao {
+  border: none;
+  border-radius: 1px;
+  background: #ffbe0e;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+.botao_card {
+  border: none;
+  border-radius: 1px;
+  background: #ffbe0e;
+  padding: 16px 32px;
+  cursor: pointer;
+  width: 172px;
+  margin-left: 75px;
+}
+
+#botao_1 {
+  margin-top: 20px;
+}
+
+.botao_card:hover {
+  background: var(--azul);
+  color: var(--branco);
+}
+
+/* INICIO SESSAO FOOTER */
+
+.footer {
+  background-color: var(--azul);
+  padding: 24px 16px;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--amarelo);
+  margin-bottom: 20px;
+}
+
+.footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* ESPAÇO IGUALMENTE ENTRE OS ITEMS*/
+}
+
+.footer .content .menu-footer {
+  list-style: none;
+  display: flex;
+}
+
+.footer .content .menu-footer a {
+  padding: 10px;
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.footer .content h3 {
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menuj-footer li > a:hover {
+  border-bottom: 1px solid var(--branco);
+}
+/* FIM DA SESSÃO FOOTER */

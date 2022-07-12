@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* ZERANDO MARGIN E PADDING DE TODOS OS ELEMENTOS DO SITE */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--azul);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--amarelo);
+}
+
+/* CRIANDO VARIAVEIS PRA ARMAZENAR AS CORES QUE SERÃO UTILIZADAS NO SITE */
+:root {
+  --azul: #08244b;
+  --amarelo: #ffbe0e;
+  --branco: #fff;
+  --paragrafo: #00142f;
+}
+
+/* DEFININDO ESPAÇAMENTO PARA AS SEÇÕES */
+section {
+  padding: 80px 30px;
+}
+
+body {
+  overflow-x: hidden;
+}
+/* ESTILO DOS BOTÕES - INICIO */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--amarelo);
+  cursor: pointer;
+  color: var(--azul);
+  font-size: 18px;
+  padding: 8px 16px;
+  font-family: 'Open sans', sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.btn:hover {
+  background: var(--azul);
+  color: var(--amarelo);
+  font-weight: 400;
+}
+
+#btn-about {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--azul);
+  cursor: pointer;
+  color: var(--amarelo);
+  font-size: 18px;
+  padding: 16px 24px;
+  font-family: 'Open sans', sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+#btn-about:hover {
+  background-color: var(--amarelo);
+  color: var(--azul);
+}
+
+/* ESTILOS DOS BOTÕES - FIM */
+
+/* INÍCIO DO HEADER */
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul);
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 10%;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0px 6px 4px 2px rgba(1, 0, 69, 0.17);
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+}
+
+.header-menu li > a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.header-menu li > a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* FIM DO HEADER */
+
+/* INICIO DA SEÇÃO INICIAL */
+.home-bg {
+  background: url('gacam1.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-bg .home {
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.home-bg .home .content {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+}
+
+.home-bg .home .content h1 {
+  font-size: 128px;
+  color: var(--amarelo);
+  font-family: 'Cormorant', sans-serif;
+  font-weight: 400;
+}
+
+.home-bg .home .content p {
+  padding: 8px 0;
+  font-size: 1rem;
+  color: var(--branco);
+}
+
+/* FIM DA SEÇÃO INICIAL */
+
+/* INICIO DA SEÇÃO SOBRE NÓS */
+.about {
+  background: var(--azul);
+}
+.about .cards-peças {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .cards-peças .card .img-card {
+  width: 350px;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+.about .cards-peças .card img {
+  width: 100%;
+}
+
+.about .cards-peças .card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 680px;
+  width: 400px;
+  background: var(--azul);
+  padding: 16px 4px;
+  border: 1px solid var(--amarelo);
+  border-radius: 8px;
+}
+.about .cards-peças .card h3 {
+  font-size: 32px;
+  color: var(--amarelo);
+  font-family: 'Cormorant', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.about .cards-peças .card h3::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: var(--amarelo);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.about .cards-peças .card p {
+  font-size: 16px;
+  color: var(--branco);
+  font-family: 'Open sans', sans-serif;
+  padding-inline: 4px;
+  padding-bottom: 16px;
+}
+/* FIM DA SESSÃO SOBRE NÓS */
+
+/* SESSÃO GALERIA */
+
+/* FIM DA SESSÃO GALERIA */
+/* INICIO SESSAO FOOTER */
+
+.footer {
+  background: var(--azul);
+  padding: 24px 16px;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--amarelo);
+  margin-bottom: 20px;
+}
+
+.footer .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer .content .menu-footer {
+  list-style: none;
+  display: flex;
+}
+
+.footer .content .menu-footer a {
+  padding: 10px;
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.footer .content h3 {
+  color: var(--branco);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.menu-footer li > a:hover {
+  border-bottom: 1px solid #fff;
+}
+/* FIM DO FOOTER */
